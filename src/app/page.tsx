@@ -1,13 +1,47 @@
+import Navbar from "@/components/landing/Navbar";
+import Hero from "@/components/landing/Hero";
+import { Reviews } from "@/components/landing/Reviews"
+import ServicesSuite from "@/components/landing/ServicesSuite";
+import Footer from "@/components/landing/footer";
 
+export const metadata = {
+  title: "Attenomy | Where Ideas & Innovation Meet!",
+  description: "Developing innovative solutions for an ever-changing world. Transforming ideas into reality with cutting-edge technology.",
+};
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h1>Greetings! </h1>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-      </footer>
-    </div>
+    <main className="min-h-screen">
+      <Navbar />
+      
+      <Hero />
+      {/* <Reviews /> */}
+
+      {/* <ServicesSuite /> */}
+      
+      <Footer />
+    </main>
   );
 }
+
+/* 
+
+- Coming Soon / Maintainance
+
+Generate me a landing page in nextjs typescript. The landing page must have the following components.
+
+- Header. The header has logo (is in public/attenomy.svg), the company name "Attenomy" on the left and /products and /services navigation buttons on the right.
+- Hero. The hero section features the tagline "Developing innovative solutions for an everchanging world!" and has a 3d tech/globe/atom element.
+- Partner Brands is a list of partner brands scrolling horizontally.
+
+- Product Suite is a list of different apps icons each in a cube flowing / suspended in 3d / hover anim
+- Services Suite has a bento box showcasing services and descriptions 
+- Footer has logo and name following by social media icons in first column and in subsequent columns...
+Company - Home About Contact Careers 
+Explore - Products Services Blog
+Legal - Terms Privacy Cookies
+
+I want you to use the theme from existing globals.css. like foreground, background, etc. I want a super modern website that has interaction at every element and many animations. Someone seeing it should feel it is the pinnacle of frontend design. Some inspiration: https://resend.com/. You may use anything you want. I want you to keep each of the component of the landing page in a seperate file and import in the root page.tsx. 
+
+- Reviews is 
+*/
