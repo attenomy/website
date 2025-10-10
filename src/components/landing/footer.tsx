@@ -61,7 +61,7 @@ interface FooterProps {
 // Social Media Icons using foreground color
 const SocialIcons = {
   Twitter: (
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
       <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
     </svg>
   ),
@@ -95,6 +95,11 @@ const SocialIcons = {
       <path d="M20.317 4.369a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.029 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z" />
     </svg>
   ),
+  Threads: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948s.928 1.509 1.005 2.644q.492.207.905.484c1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.2 6.2 0 0 0-1.528-.161" />
+    </svg>
+  )
 };
 
 export default function FooterSection({
@@ -133,10 +138,33 @@ export default function FooterSection({
     { text: "Terms of Service", href: '/terms' },
   ],
   socialMedia = [
-    /* {
+    {
       name: "Twitter", href: "https://twitter.com/attenomy",
       icon: undefined
     },
+    {
+      name: "YouTube", href: "https://www.youtube.com/channel/UCVGh1FypiIk1Y6XqmLyp4IA",
+      icon: undefined
+    },
+    {
+      name: "LinkedIn", href: "https://www.linkedin.com/company/attenomy",
+      icon: undefined
+    },
+    
+    /* {
+      name: "Instagram", href: "https://www.instagram.com/attenomy_com/",
+      icon: undefined
+    },
+    {
+      name: "Threads", href: "https://www.threads.com/@attenomy_com",
+      icon: undefined
+    },
+    {
+      name: "Facebook", href: "https://www.facebook.com/profile.php?id=61582116868060",
+      icon: undefined
+    }, */
+    
+    /*
     {
       name: "GitHub", href: "https://github.com/attenomy",
       icon: undefined
@@ -159,8 +187,8 @@ export default function FooterSection({
             <FooterColumn className="lg:col-span-2">
               <div className="flex flex-col gap-6">
                 <div className="flex items-center gap-3">
-                  {logo} 
-                
+                  {logo}
+
                 </div>
                 <p className="text-muted-foreground text-sm max-w-md">
                   Developing innovative solutions for an ever-changing world.
