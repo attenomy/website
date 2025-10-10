@@ -43,6 +43,10 @@ export default function NavbarComponent({
       name: "Services",
       link: "/services",
     },
+    {
+      name: "Blog",
+      link: "/blog",
+    }
   ],
   showModeToggle = true,
 }: NavbarComponentProps) {
