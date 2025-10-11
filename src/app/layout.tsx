@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { ThemeProvider } from "@/components/contexts/theme-provider";
 import { inter } from "@/lib/fonts";
+import LoadingSpinner from "@/components/contexts/LoadingSpinner";
 
 export const metadata: Metadata = {
   title: "Attenomy | Innovative Solutions for an Everchanging World",
@@ -14,7 +15,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${inter.className} bg-background antialiased`}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <LoadingSpinner />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

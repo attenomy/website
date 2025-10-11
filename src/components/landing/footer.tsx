@@ -2,6 +2,7 @@
 
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import Link from 'next/link'
 
 import {
   Footer,
@@ -16,10 +17,10 @@ import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 
 export const FooterLogo = () => {
   return (
-    <a
+    <Link
       href="/"
-      className="relative z-20 mr-4 flex items-center space-x-2  py-1 text-sm font-normal text-black"
-    >
+      className="relative z-20 mr-4 flex items-center space-x-2  py-1 text-sm font-normal text-black">
+
       <img
         src="attenomy-squircle.svg"
         alt="logo"
@@ -27,7 +28,8 @@ export const FooterLogo = () => {
         height={30}
       />
       <h1 className="font-medium text-xl text-black dark:text-white">Attenomy</h1>
-    </a>
+
+    </Link>
   );
 };
 
@@ -150,7 +152,11 @@ export default function FooterSection({
       name: "LinkedIn", href: "https://www.linkedin.com/company/attenomy",
       icon: undefined
     },
-    
+    {
+      name: "GitHub", href: "https://www.github.com/attenomy",
+      icon: undefined
+    }
+
     /* {
       name: "Instagram", href: "https://www.instagram.com/attenomy_com/",
       icon: undefined
@@ -163,7 +169,7 @@ export default function FooterSection({
       name: "Facebook", href: "https://www.facebook.com/profile.php?id=61582116868060",
       icon: undefined
     }, */
-    
+
     /*
     {
       name: "GitHub", href: "https://github.com/attenomy",
@@ -203,18 +209,19 @@ export default function FooterSection({
                     </h4> */}
                     <div className="flex items-center gap-4">
                       {socialMedia.map((social, index) => (
-                        <a
-                          key={index}
+                        <Link
                           href={social.href}
+                          key={index}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-                          aria-label={`Follow us on ${social.name}`}
-                        >
+                          aria-label={`Follow us on ${social.name}`}>
+
                           {SocialIcons[social.name as keyof typeof SocialIcons] || (
                             <div className="w-5 h-5 bg-muted-foreground rounded" />
                           )}
-                        </a>
+
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -230,13 +237,14 @@ export default function FooterSection({
                 </h3>
                 <div className="flex flex-col gap-3">
                   {column.links.map((link, linkIndex) => (
-                    <a
-                      key={linkIndex}
+                    <Link
                       href={link.href}
-                      className="text-muted-foreground text-sm hover:text-foreground transition-colors duration-200"
-                    >
+                      key={linkIndex}
+                      className="text-muted-foreground text-sm hover:text-foreground transition-colors duration-200">
+
                       {link.text}
-                    </a>
+
+                    </Link>
                   ))}
                 </div>
               </FooterColumn>

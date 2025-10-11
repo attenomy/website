@@ -1,8 +1,11 @@
 import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
+import { Partners } from "@/components/landing/Partners"
 import { Reviews } from "@/components/landing/Reviews"
+import { ProductsSuite } from "@/components/landing/ProductsSuite";
 import ServicesSuite from "@/components/landing/ServicesSuite";
 import Footer from "@/components/landing/footer";
+import { Features } from "@/components/landing/Features";
 
 export const metadata = {
   title: "Attenomy | Where Ideas & Innovation Meet!",
@@ -13,12 +16,25 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Navbar />
-      
-      <Hero />
-      {/* <Reviews /> */}
 
+      <Hero />
+
+      {/* <Partners /> Build immediate trust */}
+      {/* <ProblemSolution /> Show you understand pain points */}
+      {/*  <LiveDemo /> Let them experience value */}
+      {/* <CaseStudies />  Prove with real results */}
+
+      <Features />
+
+      {/* <ProductFeatures /> Detailed benefits */}
+      {/* <Reviews /> */}
+      {/*  <FAQ /> Address objections */}
+      {/*  <Newsletter /> Capture leads */}
+
+      {/* <ProductsSuite />  */}
       {/* <ServicesSuite /> */}
-      
+
+
       <Footer />
     </main>
   );

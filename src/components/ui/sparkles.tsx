@@ -30,6 +30,8 @@ export const SparklesCore = (props: ParticlesProps) => {
     particleDensity,
   } = props;
   const [init, setInit] = useState(false);
+  const [resolvedParticleColor, setResolvedParticleColor] = useState(particleColor || "#000000");
+
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
@@ -37,6 +39,55 @@ export const SparklesCore = (props: ParticlesProps) => {
       setInit(true);
     });
   }, []);
+
+  // Auto-detect theme and set particle color
+  useEffect(() => {
+    const updateParticleColor = () => {
+      // If particleColor is explicitly provided, use it
+      if (particleColor) {
+        setResolvedParticleColor(particleColor);
+        return;
+      }
+
+      // Auto-detect theme from document class
+      const isDark = document.documentElement.classList.contains('dark');
+      
+      // Use system preference as fallback if no class is set
+      const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      const shouldUseDark = isDark || (!document.documentElement.classList.contains('light') && systemPrefersDark);
+      
+      setResolvedParticleColor(shouldUseDark ? "#ffffff" : "#000000");
+    };
+
+    // Initial detection
+    updateParticleColor();
+
+    // Watch for theme changes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'class') {
+          updateParticleColor();
+        }
+      });
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+
+    // Watch for system theme changes
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleSystemThemeChange = () => updateParticleColor();
+    mediaQuery.addEventListener('change', handleSystemThemeChange);
+
+    return () => {
+      observer.disconnect();
+      mediaQuery.removeEventListener('change', handleSystemThemeChange);
+    };
+  }, [particleColor]);
+
   const controls = useAnimation();
 
   const particlesLoaded = async (container?: Container) => {
@@ -58,10 +109,11 @@ export const SparklesCore = (props: ParticlesProps) => {
           id={id || generatedId}
           className={cn("h-full w-full")}
           particlesLoaded={particlesLoaded}
+          key={resolvedParticleColor} // Force re-render when color changes
           options={{
             background: {
               color: {
-                value: background || "#0d47a1",
+                value: background || "transparent",
               },
             },
             fullScreen: {
@@ -122,7 +174,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                 },
               },
               color: {
-                value: particleColor || "#ffffff",
+                value: resolvedParticleColor,
                 animation: {
                   h: {
                     count: 0,

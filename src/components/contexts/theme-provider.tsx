@@ -23,7 +23,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       attribute="class"
       defaultTheme="system"
       enableSystem={true}
-      storageKey="theme" // saves selection in localStorage automatically
+      storageKey="theme"
+      // Force resolution to light/dark by disabling system class
+      enableColorScheme={false}
     >
       <ThemeContextProvider>{children}</ThemeContextProvider>
     </NextThemeProvider>
@@ -31,9 +33,14 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 }
 
 function ThemeContextProvider({ children }: { children: React.ReactNode }) {
-  const { theme, setTheme } = useNextTheme();
+  const { theme, setTheme, resolvedTheme } = useNextTheme();
+  
+  // Use resolvedTheme which is always "light" or "dark", never "system"
   return (
-    <ThemeContext.Provider value={{ theme: theme ?? "system", setTheme }}>
+    <ThemeContext.Provider value={{ 
+      theme: resolvedTheme ?? "light", 
+      setTheme 
+    }}>
       {children}
     </ThemeContext.Provider>
   );

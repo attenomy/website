@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 
 import React, { useRef, useState } from "react";
-
+import Link from 'next/link'
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -125,13 +125,13 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
       )}
     >
       {items.map((item, idx) => (
-        <a
+        <Link
+          href={item.link}
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
           className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
-          key={`link-${idx}`}
-          href={item.link}
-        >
+          key={`link-${idx}`}>
+
           {hovered === idx && (
             <motion.div
               layoutId="hovered"
@@ -139,7 +139,8 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             />
           )}
           <span className="relative z-20">{item.name}</span>
-        </a>
+
+        </Link>
       ))}
     </motion.div>
   );
@@ -232,10 +233,10 @@ export const MobileNavToggle = ({
 
 export const NavbarLogo = () => {
   return (
-    <a
+    <Link
       href="/"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
-    >
+      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
+
       <img
         src="attenomy-squircle.svg"
         alt="logo"
@@ -243,7 +244,8 @@ export const NavbarLogo = () => {
         height={30}
       />
       <span className="font-medium text-black dark:text-white">Attenomy</span>
-    </a>
+
+    </Link>
   );
 };
 
