@@ -8,7 +8,7 @@ import { SparklesCore } from "@/components/ui/sparkles";
 import { FlipWords } from "../ui/flip-words";
 
 export function Hero() {
-    const words = ["innovative", "creative", "digital", "modern"];
+    const words = ["innovative", "creative", "revolutionary", "modern"];
     const { theme } = useTheme();
 
     return (
@@ -33,19 +33,18 @@ export function Hero() {
                 </Badge> */}
 
                 <h1 className="text-4xl md:text-5xl lg:text-7xl font-semibold max-w-7xl mx-auto relative z-20 pb-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
-                    Elevating your{" "}
+                    Crafting{" "}
                     <span className="hidden xl:inline lg:inline">
                         <FlipWords words={words} />
                     </span>
                     <span className="inline xl:hidden lg:hidden">
-                        digital
+                        revolutionary
                     </span>{" "}
-                    journey!
+                    applications!
                 </h1>
 
                 <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                    Explore our services that are designed to transform
-                    your business operations and drive unprecedented growth.
+                    See the revolutionary apps and solutions we are crafting that will redefine how technology is leveraged. Stay tuned for what's next.
                 </p>
 
                 {/* <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">

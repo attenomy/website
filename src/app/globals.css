@@ -128,7 +128,7 @@
 
 @keyframes slow-shine {
   0% {
-    transform: translateX(-100%) skewX(-12deg);
+    transform: translateX(-200%) skewX(-12deg);
   }
   100% {
     transform: translateX(800%) skewX(-12deg);

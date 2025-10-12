@@ -133,7 +133,7 @@ export function Newsletter() {
             </h2>
             <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
               Get exclusive insights on AI automation, digital transformation trends, 
-              and early access to our latest service offerings.
+              and get exclusive early access when we launch new products or services.
             </p>
 
             {isSubmitted ? (
