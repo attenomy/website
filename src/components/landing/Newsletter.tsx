@@ -5,10 +5,11 @@ import { useTheme } from "next-themes";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ArrowRight, Mail, CheckCircle, Clock } from "lucide-react";
+import { ArrowRight, Mail, CheckCircle, Clock, User } from "lucide-react";
 
 export function Newsletter() {
   const { theme } = useTheme();
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -50,6 +51,12 @@ export function Newsletter() {
       return;
     }
 
+    // Basic validation
+    if (!name.trim() || !email.trim()) {
+      alert('Please enter both name and email');
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -59,7 +66,8 @@ export function Newsletter() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ 
-          email,
+          name: name.trim(),
+          email: email.trim(),
           timestamp: new Date().toISOString(),
           source: 'website-newsletter'
         }),
@@ -85,6 +93,7 @@ export function Newsletter() {
         }, 1000);
 
         setIsSubmitted(true);
+        setName("");
         setEmail("");
         
         // Reset success message after 5 seconds
@@ -103,6 +112,7 @@ export function Newsletter() {
   };
 
   const isCooldownActive = cooldown > 0;
+  const isFormValid = name.trim() && email.trim();
 
   return (
     <section className="py-20 bg-zinc-100/50 dark:bg-zinc-900/10">
@@ -131,10 +141,10 @@ export function Newsletter() {
                 <CheckCircle className="w-6 h-6 text-green-600 dark:text-green-400" />
                 <div className="text-left">
                   <p className="text-green-700 dark:text-green-300 font-medium">
-                    Successfully subscribed!
+                    Thank you!
                   </p>
                   <p className="text-green-600 dark:text-green-400 text-sm">
-                    Please wait {cooldown}s before submitting again.
+                    You've been successfully subscribed. Please wait {cooldown}s before submitting again.
                   </p>
                 </div>
               </div>
@@ -152,48 +162,65 @@ export function Newsletter() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Input
-                    type="email"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    disabled={isSubmitting || isCooldownActive}
-                    className="flex-1 h-12 px-4 text-base border-zinc-300 dark:border-zinc-600 focus:border-primary"
-                  />
-                  <Button 
-                    type="submit" 
-                    size="xl"
-                    disabled={isSubmitting || isCooldownActive || !email}
-                    className="group relative overflow-hidden bg-gradient-to-br from-primary via-primary to-primary/90 hover:from-primary hover:via-primary/80 hover:to-primary/60 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/30 active:scale-95 dark:from-primary/90 dark:via-primary/80 dark:to-primary/70 dark:hover:from-primary dark:hover:via-primary/90 dark:hover:to-primary/80 h-12 px-8 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
-                  >
-                    <span className="relative z-10 flex items-center">
-                      {isSubmitting ? (
-                        <>
-                          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
-                          Adding...
-                        </>
-                      ) : isCooldownActive ? (
-                        <>
-                          <Clock className="w-4 h-4 mr-2" />
-                          Wait {cooldown}s
-                        </>
-                      ) : (
-                        <>
-                          Subscribe
-                          <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300 ease-out" />
-                        </>
-                      )}
-                    </span>
-                    {!isCooldownActive && !isSubmitting && (
+                <div className="space-y-3">
+                  <div className="relative">
+                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                    <Input
+                      type="text"
+                      placeholder="Your name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                      disabled={isSubmitting || isCooldownActive}
+                      className="pl-10 h-12 text-base border-zinc-300 dark:border-zinc-600 focus:border-primary"
+                    />
+                  </div>
+                  <div className="relative">
+                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                    <Input
+                      type="email"
+                      placeholder="Your email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      disabled={isSubmitting || isCooldownActive}
+                      className="pl-10 h-12 text-base border-zinc-300 dark:border-zinc-600 focus:border-primary"
+                    />
+                  </div>
+                </div>
+                
+                <Button 
+                  type="submit" 
+                  size="xl"
+                  disabled={isSubmitting || isCooldownActive || !isFormValid}
+                  className="w-full group relative overflow-hidden bg-gradient-to-br from-primary via-primary to-primary/90 hover:from-primary hover:via-primary/80 hover:to-primary/60 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/30 active:scale-95 dark:from-primary/90 dark:via-primary/80 dark:to-primary/70 dark:hover:from-primary dark:hover:via-primary/90 dark:hover:to-primary/80 h-12 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                >
+                  <span className="relative z-10 flex items-center justify-center">
+                    {isSubmitting ? (
                       <>
-                        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/50 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 dark:via-white/30" />
-                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 dark:from-white/10" />
+                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+                        Adding...
+                      </>
+                    ) : isCooldownActive ? (
+                      <>
+                        <Clock className="w-4 h-4 mr-2" />
+                        Wait {cooldown}s
+                      </>
+                    ) : (
+                      <>
+                        Subscribe Now
+                        <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300 ease-out" />
                       </>
                     )}
-                  </Button>
-                </div>
+                  </span>
+                  {!isCooldownActive && !isSubmitting && (
+                    <>
+                      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/50 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 dark:via-white/30" />
+                      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 dark:from-white/10" />
+                    </>
+                  )}
+                </Button>
+                
                 <p className="text-xs text-muted-foreground">
                   {isCooldownActive 
                     ? `Cooldown active: ${cooldown}s remaining` 

@@ -1,11 +1,19 @@
+// app/api/newsletter/route.js
 import { NextResponse } from 'next/server';
 
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { email, timestamp, source } = body;
+    const { name, email, timestamp, source } = body;
 
-    // Validate email
+    // Validate inputs
+    if (!name || !name.trim()) {
+      return NextResponse.json(
+        { error: 'Name is required' },
+        { status: 400 }
+      );
+    }
+
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json(
         { error: 'Invalid email address' },
@@ -22,7 +30,8 @@ export async function POST(request) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        email,
+        name: name.trim(),
+        email: email.trim(),
         timestamp,
         source
       }),
@@ -39,7 +48,7 @@ export async function POST(request) {
 
     return NextResponse.json({ 
       success: true, 
-      message: 'Successfully subscribed to newsletter' 
+      message: 'Successfully subscribed to newsletter!' 
     });
 
   } catch (error) {
