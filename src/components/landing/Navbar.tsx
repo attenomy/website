@@ -36,6 +36,10 @@ interface NavbarComponentProps {
 export default function NavbarComponent({
   navItems = [
     {
+      name: "About",
+      link: "/about",
+    },
+    {
       name: "Products",
       link: "/products",
     },

@@ -1,11 +1,12 @@
 import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
-import { Partners } from "@/components/landing/Partners"
-import { Reviews } from "@/components/landing/Reviews"
+import { Partners } from "@/components/services/Partners"
+import { Reviews } from "@/components/services/Reviews"
 import { ProductsSuite } from "@/components/landing/ProductsSuite";
 import ServicesSuite from "@/components/landing/ServicesSuite";
 import Footer from "@/components/landing/footer";
-import { Features } from "@/components/landing/Features";
+import { Features } from "@/components/services/Features";
+import { Newsletter } from "@/components/landing/Newsletter";
 
 export const metadata = {
   title: "Attenomy | Where Ideas & Innovation Meet!",
@@ -29,7 +30,7 @@ export default function Home() {
       {/* <ProductFeatures /> Detailed benefits */}
       {/* <Reviews /> */}
       {/*  <FAQ /> Address objections */}
-      {/*  <Newsletter /> Capture leads */}
+      <Newsletter /> {/* Capture leads */}
 
       {/* <ProductsSuite />  */}
       {/* <ServicesSuite /> */}

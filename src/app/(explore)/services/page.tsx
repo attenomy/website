@@ -3,13 +3,13 @@ import Footer from "@/components/landing/footer";
 
 import { Hero } from "@/components/services/Hero"
 import Methodology  from "@/components/services/Methodology"
-import { Reviews } from "@/components/landing/Reviews"
-import { Partners } from "@/components/landing/Partners"
+import { Reviews } from "@/components/services/Reviews"
+import { Partners } from "@/components/services/Partners"
 import { CTA } from "@/components/services/CTA"
 import { useTheme } from "next-themes";
 import { ServicesList } from "@/components/services/ServicesList";
 import { FAQ } from "@/components/services/FAQ";
-import { Features } from "@/components/landing/Features";
+import { Features } from "@/components/services/Features";
 
 export const metadata = {
   title: "Attenomy | Our Services",
