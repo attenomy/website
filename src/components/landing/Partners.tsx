@@ -25,20 +25,20 @@ export function Partners({
   speed = "slow",
   className = "",
   showBackground = true,
-  height = "30rem",
+  height = "20rem",
   pauseOnHover = true
 }: PartnersProps) {
   return (
     <div
       className={`
         rounded-md flex flex-col antialiased 
-        ${showBackground ? 'bg-white dark:bg-black dark:bg-grid-white/[0.05]' : 'bg-transparent'}
+        ${showBackground ? 'bg-zinc-100 dark:bg-black dark:bg-grid-white/[0.05]' : 'bg-transparent'}
         items-center justify-center relative overflow-hidden
         ${className}
       `}
       style={{ height }}
     >
-      <h1 className="text-4xl md:text-5xl lg:text-7xl font-semibold max-w-7xl mx-auto relative z-20 pb-6 pt-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
+      <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto relative z-20 pb-2 pt-12 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 to-neutral-700 dark:from-neutral-800 dark:via-neutral-700 dark:to-white">
         Our Partners
       </h1>
       <InfiniteMovingBrands
@@ -59,7 +59,7 @@ const defaultPartners = [
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/example-logo.svg",
   },
   {
     name: " ",
@@ -67,7 +67,7 @@ const defaultPartners = [
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/example-logo.svg",
   },
   {
     name: " ",
@@ -75,7 +75,7 @@ const defaultPartners = [
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/example-logo.svg",
   },
   {
     name: " ",
@@ -83,7 +83,7 @@ const defaultPartners = [
   },
   {
     name: " ",
-    logo: "/example-logo.png",
+    logo: "/example-logo.svg",
   },
   {
     name: " ",
@@ -91,7 +91,7 @@ const defaultPartners = [
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/example-logo.svg",
   },
   {
     name: " ",
@@ -99,6 +99,102 @@ const defaultPartners = [
   },
   {
     name: " ",
+    logo: "/example-logo.svg",
+  },
+  {
+    name: " ",
     logo: "/acme-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/example-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/acme-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/example-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/acme-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/example-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/acme-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/example-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/acme-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/example-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/acme-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/example-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/acme-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/example-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/acme-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/example-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/acme-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/example-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/acme-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/example-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/acme-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/example-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/acme-logo.svg",
+  },
+  {
+    name: " ",
+    logo: "/example-logo.svg",
   },
 ];

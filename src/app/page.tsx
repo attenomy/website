@@ -24,7 +24,7 @@ export default function Home() {
       {/*  <LiveDemo /> Let them experience value */}
       {/* <CaseStudies />  Prove with real results */}
 
-      <Features />
+      
 
       {/* <ProductFeatures /> Detailed benefits */}
       {/* <Reviews /> */}

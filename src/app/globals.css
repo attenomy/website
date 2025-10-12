@@ -131,7 +131,7 @@
     transform: translateX(-100%) skewX(-12deg);
   }
   100% {
-    transform: translateX(500%) skewX(-12deg);
+    transform: translateX(800%) skewX(-12deg);
   }
 }
 
@@ -215,4 +215,26 @@
 #nprogress .spinner-icon .dark {
   border-top-color: #ffffff !important;
   border-left-color: #ffffff !important;
+}
+
+
+
+/* FOR BRANDS SCROLL */
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 1rem));
+  }
+}
+
+.animate-scroll {
+  animation: scroll var(--animation-duration, 40s) linear infinite;
+  animation-direction: var(--animation-direction, forwards);
+}
+
+.animate-scroll:hover {
+  animation-play-state: var(--animation-play-state, running);
 }

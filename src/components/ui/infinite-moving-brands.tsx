@@ -6,8 +6,8 @@ import Image from "next/image";
 
 export const InfiniteMovingBrands = ({
   items,
-  direction = "left",
-  speed = "fast",
+  direction = "right",
+  speed = "slow",
   pauseOnHover = true,
   className,
 }: {
@@ -71,19 +71,20 @@ export const InfiniteMovingBrands = ({
       const scrollerContent = Array.from(scrollerRef.current.children);
       const originalItems = scrollerContent.slice(0, items.length);
       
+      // Clear existing content
       while (scrollerRef.current.firstChild) {
         scrollerRef.current.removeChild(scrollerRef.current.firstChild);
       }
       
+      // Add original items
       originalItems.forEach(item => {
         scrollerRef.current?.appendChild(item);
       });
 
+      // Duplicate items for seamless loop
       originalItems.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        }
+        scrollerRef.current?.appendChild(duplicatedItem);
       });
 
       getDirection();
@@ -116,21 +117,41 @@ export const InfiniteMovingBrands = ({
   
   const getSpeed = () => {
     if (containerRef.current) {
-      if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
-      } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
-      } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
+      // Calculate duration based on number of items and speed setting
+      const baseDuration = calculateBaseDuration(items.length);
+      let duration;
+      
+      switch (speed) {
+        case "fast":
+          duration = baseDuration * 0.3;
+          break;
+        case "normal":
+          duration = baseDuration * 0.6;
+          break;
+        case "slow":
+        default:
+          duration = baseDuration;
+          break;
       }
+      
+      containerRef.current.style.setProperty("--animation-duration", `${duration}s`);
     }
+  };
+
+  // Calculate base duration based on number of items
+  const calculateBaseDuration = (itemCount: number) => {
+    // For many items (like your 36 items), we need much longer duration
+    if (itemCount <= 8) return 120; 
+    if (itemCount <= 16) return 180;
+    if (itemCount <= 24) return 240;
+    return 300; // For 25+ items
   };
   
   return (
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]",
         className
       )}
       key={key}
@@ -154,15 +175,14 @@ export const InfiniteMovingBrands = ({
                 "transition-all duration-500 hover:scale-125"
               )}
             >
-              <div className="flex items-center justify-center h-36 w-36 relative">
+              <div className="flex items-center justify-center h-24 w-24 relative">
                 <Image
                   src={item.logo}
                   alt={`${item.name} logo`}
-                  width={144}
-                  height={144}
+                  width={100}
+                  height={100}
                   className={cn(
                     "object-contain w-full h-full transition-all duration-500 ",
-                    // Only apply invert in dark mode - this will make black logos white
                     isDark && "invert-40" 
                   )}
                   priority={idx < 6}

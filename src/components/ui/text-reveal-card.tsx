@@ -126,14 +126,14 @@ export const TextRevealCard = ({
 
         <div className="overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
           <p className={cn(
-            "text-white sm:text-[3rem] py-10 font-bold bg-clip-text text-transparent bg-[#FFFFFF]",
+            "text-white md:text-[3rem] text-[2rem] py-10 font-bold bg-clip-text text-transparent bg-[#FFFFFF]",
             !isDark && "text-gray-900 bg-gray-200" // Light mode text
           )}>
             {text}
           </p>
         </div>
       </div>
-      <MemoizedStars isDark={isDark} />
+      {/* <MemoizedStars isDark={isDark} /> */}
     </div>
   );
 };

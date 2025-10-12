@@ -8,8 +8,17 @@ import {
 
 export function Features() {
   return (
-    <div className="min-h-screen w-full py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen w-full py-20 px-8 bg-zinc-100 dark:bg-zinc-950">
+      <div className="max-w-7xl mx-auto ">
+
+        <div className="text-center mb-16 ">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800  to-neutral-700 dark:from-neutral-800 dark:via-white  leading-tight">
+            Why are we different?
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+            We're different because we combine cutting-edge AI technology with deep business understanding to deliver solutions that don't just work, they transform.
+          </p>
+        </div>
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

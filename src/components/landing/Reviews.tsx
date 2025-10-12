@@ -8,6 +8,7 @@ interface ReviewItem {
     name: string;
     title: string;
     rating?: number;
+    link?: string; // Add this line
 }
 
 interface ReviewsProps {
@@ -26,7 +27,7 @@ export function Reviews({
     speed = "slow",
     className = "",
     showBackground = true,
-    height = "30rem",
+    height = "50rem",
     pauseOnHover = true
 }: ReviewsProps) {
     return (
@@ -44,8 +45,9 @@ export function Reviews({
             </h1>
             <InfiniteMovingCards
                 items={items}
-                direction={direction}
-                speed={speed}
+                rows={2}
+                speed="slow"
+                direction="right"
                 pauseOnHover={pauseOnHover}
             />
         </div>
@@ -58,25 +60,30 @@ const defaultTestimonials = [
         quote: "Attenomy's innovative solutions transformed our digital infrastructure completely. Their expertise in cloud architecture is unmatched.",
         name: "Sarah Chen",
         title: "CTO at TechCorp",
+        link: "https://attenomy.com",
     },
     {
         quote: "The team delivered exceptional results, reducing our operational costs by 40% while improving system performance significantly.",
         name: "Michael Rodriguez",
         title: "Operations Director",
+        link: "https://attenomy.com",
     },
     {
         quote: "Outstanding service and innovative approach to solving complex business challenges. Highly recommended!",
         name: "Emily Watson",
         title: "Product Lead",
+        link: "https://attenomy.com",
     },
     {
         quote: "Their cutting-edge technology stack and professional team exceeded all our expectations. A true partnership.",
         name: "David Kim",
         title: "Head of Engineering",
+        link: "https://attenomy.com",
     },
     {
         quote: "Attenomy helped us scale our platform to handle 10x more traffic without any downtime. Incredible work!",
         name: "Alex Thompson",
         title: "CEO at StartupXYZ",
+        link: "https://attenomy.com",
     },
 ];

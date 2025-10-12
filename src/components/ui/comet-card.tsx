@@ -90,7 +90,7 @@ export const CometCard = ({
           translateX,
           translateY,
           boxShadow:
-            "rgba(0, 0, 0, 0.01) 0px 520px 146px 0px, rgba(0, 0, 0, 0.04) 0px 333px 133px 0px, rgba(0, 0, 0, 0.08) 0px 83px 83px 0px, rgba(0, 0, 0, 0.12) 0px 21px 46px 0px",
+            "rgba(0, 0, 0, 0.005) 0px 520px 146px 0px, rgba(0, 0, 0, 0.02) 0px 333px 133px 0px, rgba(0, 0, 0, 0.04) 0px 83px 83px 0px, rgba(0, 0, 0, 0.06) 0px 21px 46px 0px",
         }}
         initial={{ scale: 1, z: 0 }}
         whileHover={{
