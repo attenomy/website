@@ -10,28 +10,36 @@ import { useTheme } from "next-themes";
 
 const items = [
     {
-        title: "What services do you offer?",
-        content: "We provide comprehensive digital transformation services including web development, mobile applications, cloud solutions, AI integration, and ongoing technical support to help businesses scale efficiently.",
+        title: "What AI automation services do you offer?",
+        content: "We provide AI automation services built on proven technology we use ourselves. Our solutions include workflow automation, intelligent document processing, AI-powered customer engagement, and custom automation agents, all battle-tested in our own SaaS products.",
     },
     {
-        title: "How long does a typical project take?",
-        content: "Project timelines vary based on complexity. Simple websites take 2-4 weeks, custom web applications 6-12 weeks, and enterprise solutions 3-6 months. We provide detailed timelines during our initial consultation.",
+        title: "Do you actually use AI automation in your own products?",
+        content: "Yes! Every AI service we offer is actively used and refined in our own SaaS products. This real-world testing ensures our solutions are practical, effective, and deliver measurable results before we recommend them to clients.",
     },
     {
-        title: "Do you provide ongoing support?",
-        content: "Yes, we offer various support packages including maintenance, updates, security monitoring, and technical assistance. Our support plans are tailored to your business needs and can scale as you grow.",
+        title: "How does running your own SaaS benefit your clients?",
+        content: "Running our own SaaS products means we understand the challenges of product development, scaling, and customer retention firsthand. We bring this operational expertise to every client engagement, offering insights beyond just technical implementation.",
     },
     {
-        title: "What technologies do you work with?",
-        content: "We work with modern technologies including React, Next.js, Node.js, Python, AWS, Google Cloud, and various databases. We choose the best stack for your specific project requirements.",
+        title: "What's your approach to AI implementation?",
+        content: "We follow a 'product-led' approach, implementing AI solutions that we would use ourselves. This means focusing on practical ROI, user experience, and sustainable scaling rather than just technical novelty.",
     },
     {
-        title: "Can you work with our existing team?",
-        content: "Absolutely! We seamlessly integrate with your existing teams through collaborative tools and agile methodologies. We can augment your team or work as an independent unit based on your preference.",
+        title: "Can you help automate our specific business processes?",
+        content: "Absolutely! We analyze your workflows through the lens of operational efficiency we've developed running our own products. We identify automation opportunities that deliver real business value, not just technical solutions.",
     },
     {
-        title: "What is your pricing structure?",
-        content: "We offer flexible pricing models: fixed-price for well-defined projects, time-and-materials for evolving requirements, and dedicated team models for long-term partnerships. We provide transparent quotes with no hidden costs.",
+        title: "What makes your AI services different from other providers?",
+        content: "We're practitioners, not just consultants. We face the same challenges you do, scaling, customer support, operational efficiency. Our AI solutions are born from solving real problems in our own business, making them more practical and effective.",
+    },
+    {
+        title: "Do you offer ongoing support and improvements?",
+        content: "Yes, and we treat client products with the same care as our own. As we improve our AI automation stack internally, those enhancements flow to our clients. It's a continuous improvement cycle that benefits everyone.",
+    },
+    {
+        title: "What's your pricing structure?",
+        content: "We offer project-based pricing for initial implementations and subscription models for ongoing AI services. Since we use these same services internally, we're focused on delivering value that justifies the investment.",
     },
 ];
 

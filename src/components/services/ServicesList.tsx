@@ -31,8 +31,8 @@ export function ServicesList() {
     const { theme } = useTheme();
 
     return (
-        <section className="py-20 px-6 bg-zinc-100/75 dark:bg-zinc-900/25">
-            <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-6 bg-zinc-100/75 dark:bg-zinc-950 ">
+            <div className="max-w-7xl mx-auto ">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 to-neutral-700 dark:from-neutral-800  dark:to-white leading-tight">
                         Comprehensive Service Solutions

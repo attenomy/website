@@ -14,7 +14,7 @@ export default function Hero() {
 
   return (
     <>
-      <div className="xl:h-[40rem] h-[40rem] bg-zinc-100 dark:bg-stone-950 flex flex-col items-center justify-center relative">
+      <div className="xl:h-[40rem] h-[40rem] bg-zinc-100 dark:bg-zinc-950 flex flex-col items-center justify-center relative">
         <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"

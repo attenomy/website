@@ -13,7 +13,6 @@ export const BackgroundRippleEffect = ({
     row: number;
     col: number;
   } | null>(null);
-  const [rippleKey, setRippleKey] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
 
   return (
@@ -22,13 +21,12 @@ export const BackgroundRippleEffect = ({
       className={cn(
         "absolute inset-0 h-full w-full overflow-hidden",
         "[--cell-border-color:var(--color-neutral-300)] [--cell-fill-color:var(--color-neutral-100)] [--cell-shadow-color:var(--color-neutral-500)]",
-        "dark:[--cell-border-color:var(--color-neutral-700)] dark:[--cell-fill-color:var(--color-neutral-900)] dark:[--cell-shadow-color:var(--color-neutral-800)]",
+        "dark:[--cell-border-color:var(--color-neutral-800)] dark:[--cell-fill-color:var(--color-neutral-950)] dark:[--cell-shadow-color:var(--color-neutral-800)]",
       )}
     >
       <div className="relative h-full w-full">
         <div className="pointer-events-none absolute inset-0 z-[2] h-full w-full overflow-hidden" />
         <DivGrid
-          key={`base-${rippleKey}`}
           className="absolute inset-0 h-full w-full mask-radial-faded opacity-60"
           containerRef={ref}
           cellSize={cellSize}
@@ -37,7 +35,6 @@ export const BackgroundRippleEffect = ({
           clickedCell={clickedCell}
           onCellClick={(row, col) => {
             setClickedCell({ row, col });
-            setRippleKey((k) => k + 1);
           }}
           interactive
         />

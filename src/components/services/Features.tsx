@@ -21,9 +21,9 @@ export function Features() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {/* Card 1 */}
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center ">
             <TextRevealCard
               text="We handle the  code."
               revealText="You focus on growth."
@@ -44,7 +44,7 @@ export function Features() {
               revealText="Engineered for scale."
             >
               <TextRevealCardTitle>
-                High-performance solutions
+                Top-performance solutions
               </TextRevealCardTitle>
               <TextRevealCardDescription>
                 Optimized systems that grow with your needs and handle increasing demands.

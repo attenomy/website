@@ -104,7 +104,7 @@ export const TextRevealCard = ({
               textShadow: isDark ? "4px 4px 15px rgba(0,0,0,0.5)" : "4px 4px 15px rgba(0,0,0,0.1)",
             }}
             className={cn(
-              "text-base sm:text-[3rem] py-10 font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300",
+              "text-base md:text-[3rem] text-[2rem] py-10 font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300",
               !isDark && "from-gray-900 to-gray-600" // Light mode gradient
             )}
           >

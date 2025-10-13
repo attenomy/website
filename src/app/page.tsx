@@ -6,7 +6,11 @@ import { ProductsSuite } from "@/components/landing/ProductsSuite";
 import ServicesSuite from "@/components/landing/ServicesSuite";
 import Footer from "@/components/landing/footer";
 import { Features } from "@/components/services/Features";
-import { Newsletter } from "@/components/landing/Newsletter";
+import { Newsletter } from "@/components/Newsletter";
+import { FAQ } from "@/components/FAQ";
+import { ProductsCall } from "@/components/landing/ProductsCall";
+import { ServicesCall } from "@/components/landing/ServicesCall";
+import { BlogCall } from "@/components/landing/BlogCall";
 
 export const metadata = {
   title: "Attenomy | Where Ideas & Innovation Meet!",
@@ -18,22 +22,24 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
 
+
       <Hero />
 
+      <ProductsCall />
+      <ServicesCall />
+
+      {/* <ProductsSuite />  */}
+      {/* <ProductFeatures /> Detailed benefits */}
+
       {/* <Partners /> Build immediate trust */}
+      {/* <ServicesSuite /> */}
+      {/* <Reviews /> */}
       {/* <ProblemSolution /> Show you understand pain points */}
       {/*  <LiveDemo /> Let them experience value */}
       {/* <CaseStudies />  Prove with real results */}
 
-      
-
-      {/* <ProductFeatures /> Detailed benefits */}
-      {/* <Reviews /> */}
-      {/*  <FAQ /> Address objections */}
-      <Newsletter /> {/* Capture leads */}
-
-      {/* <ProductsSuite />  */}
-      {/* <ServicesSuite /> */}
+      <Newsletter />
+      <FAQ />
 
 
       <Footer />

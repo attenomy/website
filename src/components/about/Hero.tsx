@@ -8,7 +8,7 @@ import { SparklesCore } from "@/components/ui/sparkles";
 import { FlipWords } from "../ui/flip-words";
 
 export function Hero() {
-    const words = ["innovative", "creative", "revolutionary", "modern"];
+    const words = ["building", "crafting", "imagining", "developing"];
     const { theme } = useTheme();
 
     return (
@@ -33,18 +33,19 @@ export function Hero() {
                 </Badge> */}
 
                 <h1 className="text-4xl md:text-5xl lg:text-7xl font-semibold max-w-7xl mx-auto relative z-20 pb-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
-                    Crafting{" "}
+                    Innovating the tomorrow, today by{" "}
                     <span className="hidden xl:inline lg:inline">
                         <FlipWords words={words} />
                     </span>
                     <span className="inline xl:hidden lg:hidden">
-                        revolutionary
+                        crafting
                     </span>{" "}
-                    applications!
+                    novel experiences.
                 </h1>
 
                 <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                    Discover the groundbreaking apps and solutions we're building, designed to redefine how technology empowers the world. Stay tuned for what’s next.
+                    Attenomy bridges the gap between ambitious ideas and cutting-edge solutions.
+                    We architect the future by transforming complex challenges into elegant digital experiences.
                 </p>
 
                 {/* <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">

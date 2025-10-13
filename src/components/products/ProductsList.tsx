@@ -12,7 +12,7 @@ export default function ProductsList() {
     ];
 
     return (
-        <section className="py-20 bg-zinc-100 dark:bg-zinc-900 transition-colors duration-300">
+        <section className="py-20 bg-zinc-100/75 dark:bg-zinc-900/20 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-8">
                 <div className="text-center mb-12 pt-4 ">
                     <h2 className="text-3xl md:text-5xl mb-8 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 to-neutral-700 dark:from-neutral-800 dark:to-white leading-tight">
@@ -30,7 +30,7 @@ export default function ProductsList() {
 
                         <div className="relative">
                             <h1 className="text-5xl md:text-8xl font-black mb-8 bg-clip-text text-transparent bg-gradient-to-br from-neutral-800 via-neutral-700 to-neutral-600 dark:from-white dark:via-neutral-300 dark:to-neutral-400 leading-tight tracking-tight">
-                                UNVEILING
+                                SOON
                             </h1>
 
                             <div className="flex items-center justify-center gap-8 mb-6">
@@ -92,6 +92,60 @@ export default function ProductsList() {
                         </CometCard>
                     ))}
                 </div> */}
+
+                {/* 
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Revolutionary Products in Development
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Our team is working tirelessly to bring you cutting-edge solutions 
+              that will transform your digital landscape.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-8 h-8 text-blue-500" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">AI-Powered Platform</h3>
+                <p className="text-muted-foreground">
+                  Intelligent solutions that learn and adapt to your business needs in real-time.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Rocket className="w-8 h-8 text-green-500" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Enterprise Suite</h3>
+                <p className="text-muted-foreground">
+                  Comprehensive tools designed for scalability and enterprise-grade performance.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Sparkles className="w-8 h-8 text-purple-500" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Innovation Hub</h3>
+                <p className="text-muted-foreground">
+                  Next-generation technology stack pushing the boundaries of what's possible.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+      */}
             </div>
         </section>
     );

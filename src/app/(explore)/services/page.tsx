@@ -8,12 +8,12 @@ import { Partners } from "@/components/services/Partners"
 import { CTA } from "@/components/services/CTA"
 import { useTheme } from "next-themes";
 import { ServicesList } from "@/components/services/ServicesList";
-import { FAQ } from "@/components/services/FAQ";
+import { FAQ } from "@/components/FAQ";
 import { Features } from "@/components/services/Features";
 
 export const metadata = {
   title: "Attenomy | Our Services",
-  description: "Discover Attenomy's comprehensive service offerings - coming soon to elevate your business to new heights.",
+  description: "Discover Attenomy's comprehensive service offerings that will elevate your business to new heights.",
 };
 
 export default function Services() {
