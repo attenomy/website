@@ -1,6 +1,12 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResendClient() {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    return null;
+  }
+  return new Resend(apiKey);
+}
 
 export async function sendContactEmail({
   name,
@@ -15,6 +21,12 @@ export async function sendContactEmail({
   subject: string;
   message: string;
 }) {
+  const resend = getResendClient();
+  if (!resend) {
+    console.warn('RESEND_API_KEY not configured, skipping email send');
+    return;
+  }
+
   try {
     await resend.emails.send({
       from: 'Attenomy Contact <contact@attenomy.com>',
