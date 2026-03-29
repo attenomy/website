@@ -134,7 +134,7 @@ export default function FooterSection({
       ],
     },
   ],
-  copyright = "© 2025 Attenomy. All rights reserved.",
+  copyright = `© ${new Date().getFullYear() || 2025} Attenomy. All rights reserved.`,
   policies = [
     { text: "Privacy Policy", href: '/privacy' },
     { text: "Terms of Service", href: '/terms' },
