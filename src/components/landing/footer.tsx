@@ -111,18 +111,22 @@ export default function FooterSection({
     {
       title: "Company",
       links: [
-        { text: "Home", href: "/" },
         { text: "About", href: "/about" },
         { text: "Contact", href: "/contact" },
         // { text: "Careers", href: "/careers" },
+        { text: "Blog", href: "/blog" },
       ],
     },
     {
-      title: "Explore",
+      title: "Products",
       links: [
-        { text: "Products", href: "/products" },
+        { text: "Products", href: "/products" },        
+      ],
+    },
+    {
+      title: "Services",
+      links: [
         { text: "Services", href: "/services" },
-        { text: "Blog", href: "/blog" },
       ],
     },
     {
@@ -188,7 +192,7 @@ export default function FooterSection({
       <div className="max-w-7xl mx-auto">
         <Footer>
           {/* Main Footer Content */}
-          <FooterContent className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+          <FooterContent className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
             {/* Logo Column - spans 2 columns on desktop */}
             <FooterColumn className="lg:col-span-2">
               <div className="flex flex-col gap-6">
