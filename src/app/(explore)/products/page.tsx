@@ -15,6 +15,9 @@ import { FAQ } from "@/components/FAQ";
 export const metadata = {
   title: "Attenomy | Our Products",
   description: "Discover Attenomy's innovative product suite - coming soon to transform your experience.",
+  alternates: {
+    canonical: "/products",
+  },
 };
 
 export default function Products() {

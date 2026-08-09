@@ -15,6 +15,9 @@ import { BlogCall } from "@/components/landing/BlogCall";
 export const metadata = {
   title: "Attenomy | Where Ideas & Innovation Meet!",
   description: "Developing innovative solutions for an ever-changing world. Transforming ideas into reality with cutting-edge technology.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function Home() {

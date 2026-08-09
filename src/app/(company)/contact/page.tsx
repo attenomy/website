@@ -5,6 +5,9 @@ import { ContactForm } from "@/components/landing/contact-form";
 export const metadata = {
   title: "Contact Us | Attenomy",
   description: "Get in touch with the Attenomy team for support, inquiries, or collaboration opportunities.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default async function Contact() {

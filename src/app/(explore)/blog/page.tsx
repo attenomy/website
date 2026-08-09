@@ -9,6 +9,9 @@ import { TopArticles } from "@/components/blog/TopArticles";
 export const metadata = {
   title: "Attenomy | Blog",
   description: "Stay tuned for insightful articles, industry trends, and expert perspectives from Attenomy - coming soon.",
+  alternates: {
+    canonical: "/blog",
+  },
 };
 
 export default function Blog() {

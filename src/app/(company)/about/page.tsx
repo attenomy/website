@@ -24,6 +24,9 @@ import { FAQ } from "@/components/FAQ";
 export const metadata = {
   title: "About Us | Attenomy",
   description: "Discover Attenomy's mission and vision transforming ideas into reality with cutting-edge technology.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 

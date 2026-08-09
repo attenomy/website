@@ -4,6 +4,9 @@ import Navbar from "@/components/landing/Navbar";
 export const metadata = {
   title: "Cookie Policy | Attenomy",
   description: "Understand how Attenomy uses cookies and similar technologies on their website.",
+  alternates: {
+    canonical: "/cookies",
+  },
 };
 
 export default async function CookiePolicy() {

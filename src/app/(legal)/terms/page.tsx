@@ -4,6 +4,9 @@ import Navbar from "@/components/landing/Navbar";
 export const metadata = {
   title: "Terms of Service | Attenomy",
   description: "Read the Terms of Service to understand the rules and guidelines for accessing the Attenomy website.",
+  alternates: {
+    canonical: "/terms",
+  },
 };
 
 export default async function Terms() {

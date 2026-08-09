@@ -14,6 +14,9 @@ import { Features } from "@/components/services/Features";
 export const metadata = {
   title: "Attenomy | Our Services",
   description: "Discover Attenomy's comprehensive service offerings that will elevate your business to new heights.",
+  alternates: {
+    canonical: "/services",
+  },
 };
 
 export default function Services() {

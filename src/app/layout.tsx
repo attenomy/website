@@ -7,8 +7,39 @@ import { inter } from "@/lib/fonts";
 import LoadingSpinner from "@/components/contexts/LoadingSpinner";
 
 export const metadata: Metadata = {
-  title: "Attenomy | Innovative Solutions for an Everchanging World",
-  description: "Developing innovative solutions for an everchanging world.",
+  metadataBase: new URL("https://attenomy.com"),
+  title: {
+    default: "Attenomy | Innovative Solutions for an Everchanging World",
+    template: "%s | Attenomy",
+  },
+  description: "Developing innovative solutions for an everchanging world. Transforming ideas into reality with cutting-edge technology.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Attenomy | Innovative Solutions for an Everchanging World",
+    description: "Developing innovative solutions for an everchanging world. Transforming ideas into reality with cutting-edge technology.",
+    url: "https://attenomy.com",
+    siteName: "Attenomy",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Attenomy | Innovative Solutions for an Everchanging World",
+    description: "Developing innovative solutions for an everchanging world. Transforming ideas into reality with cutting-edge technology.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

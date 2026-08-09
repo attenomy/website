@@ -4,6 +4,9 @@ import Navbar from "@/components/landing/Navbar";
 export const metadata = {
   title: "Privacy Policy | Attenomy",
   description: "Learn how Attenomy collects, uses, and protects your personal information.",
+  alternates: {
+    canonical: "/privacy",
+  },
 };
 
 export default async function Privacy() {
