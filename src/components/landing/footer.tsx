@@ -109,15 +109,6 @@ export default function FooterSection({
   name = "Attenomy",
   columns = [
     {
-      title: "Company",
-      links: [
-        { text: "About", href: "/about" },
-        { text: "Contact", href: "/contact" },
-        // { text: "Careers", href: "/careers" },
-        { text: "Blog", href: "/blog" },
-      ],
-    },
-    {
       title: "Products",
       links: [
         { text: "Products", href: "/products" },        
@@ -127,6 +118,15 @@ export default function FooterSection({
       title: "Services",
       links: [
         { text: "Services", href: "/services" },
+      ],
+    },
+    {
+      title: "Company",
+      links: [
+        { text: "About", href: "/about" },
+        { text: "Contact", href: "/contact" },
+        // { text: "Careers", href: "/careers" },
+        { text: "Blog", href: "/blog" },
       ],
     },
     {
