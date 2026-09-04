@@ -19,16 +19,22 @@ export const FooterLogo = () => {
   return (
     <Link
       href="/"
-      className="relative z-20 mr-4 flex items-center space-x-2  py-1 text-sm font-normal text-black">
-
+      className="relative z-20 mr-4 flex items-center space-x-2 py-1 text-sm font-normal text-black">
       <img
-        src="attenomy-squircle.svg"
-        alt="logo"
-        width={30}
-        height={30}
+        src="/attenomy-logo-light.svg"
+        alt="Attenomy logo"
+        width={42}
+        height={42}
+        className="block dark:hidden h-10 w-10"
+      />
+      <img
+        src="/attenomy-logo-dark.svg"
+        alt="Attenomy logo"
+        width={42}
+        height={42}
+        className="hidden dark:block h-10 w-10"
       />
       <h1 className="font-medium text-xl text-black dark:text-white">Attenomy</h1>
-
     </Link>
   );
 };
@@ -138,7 +144,7 @@ export default function FooterSection({
       ],
     },
   ],
-  copyright = `© ${new Date().getFullYear() || 2025} Attenomy. All rights reserved.`,
+  copyright = `© ${new Date().getFullYear() || 2025} ATTENOMY. All rights reserved.`,
   policies = [
     { text: "Privacy Policy", href: '/privacy' },
     { text: "Terms of Service", href: '/terms' },

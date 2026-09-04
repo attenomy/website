@@ -40,6 +40,15 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: [
+      { url: "/attenomy-squircle.svg", type: "image/svg+xml" },
+      { url: "/attenomy-squircle-light.png", media: "(prefers-color-scheme: light)" },
+      { url: "/attenomy-squircle-dark.png", media: "(prefers-color-scheme: dark)" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/attenomy-squircle-light.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

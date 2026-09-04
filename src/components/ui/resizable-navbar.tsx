@@ -236,15 +236,21 @@ export const NavbarLogo = () => {
     <Link
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
-
       <img
-        src="attenomy-squircle.svg"
-        alt="logo"
-        width={30}
-        height={30}
+        src="/attenomy-logo-light.svg"
+        alt="Attenomy logo"
+        width={38}
+        height={38}
+        className="block dark:hidden h-9 w-9"
       />
-      <span className="font-medium text-black dark:text-white">Attenomy</span>
-
+      <img
+        src="/attenomy-logo-dark.svg"
+        alt="Attenomy logo"
+        width={38}
+        height={38}
+        className="hidden dark:block h-9 w-9"
+      />
+      <span className="font-medium text-black dark:text-white text-base">Attenomy</span>
     </Link>
   );
 };
