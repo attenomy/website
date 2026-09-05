@@ -151,14 +151,6 @@ export default function FooterSection({
   ],
   socialMedia = [
     {
-      name: "Twitter", href: "https://twitter.com/attenomy",
-      icon: undefined
-    },
-    {
-      name: "YouTube", href: "https://www.youtube.com/channel/UCVGh1FypiIk1Y6XqmLyp4IA",
-      icon: undefined
-    },
-    {
       name: "LinkedIn", href: "https://www.linkedin.com/company/attenomy",
       icon: undefined
     },
@@ -167,11 +159,23 @@ export default function FooterSection({
       icon: undefined
     },
     {
+      name: "Facebook", href: "https://www.facebook.com/people/Attenomy/61582116868060/",
+      icon: undefined
+    },
+    {
+      name: "Twitter", href: "https://twitter.com/attenomy",
+      icon: undefined
+    },
+    {
       name: "Instagram", href: "https://www.instagram.com/attenomy_com/",
       icon: undefined
     },
     {
       name: "Threads", href: "https://www.threads.net/@attenomy_com",
+      icon: undefined
+    },
+    {
+      name: "YouTube", href: "https://www.youtube.com/channel/UCVGh1FypiIk1Y6XqmLyp4IA",
       icon: undefined
     },
   ],
