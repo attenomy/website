@@ -2,18 +2,28 @@
 
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import dynamic from "next/dynamic";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowRight, Mail, CheckCircle, Clock, User } from "lucide-react";
 
+const Beams = dynamic(() => import("@/components/ui/Beams"), { ssr: false });
+
 export function Newsletter() {
-  const { theme } = useTheme();
+  const { resolvedTheme, theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [cooldown, setCooldown] = useState(0);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const isDark = mounted ? (resolvedTheme === "dark" || theme === "dark") : false;
 
   // Check for existing cooldown on component mount
   useEffect(() => {
@@ -115,11 +125,30 @@ export function Newsletter() {
   const isFormValid = name.trim() && email.trim();
 
   return (
-    <section className="py-20 bg-zinc-100/50 dark:bg-zinc-900/10">
-      <div className="max-w-4xl mx-auto text-center px-6">
-        <Card className="rounded-2xl border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)] relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden bg-white dark:bg-zinc-950 min-h-[500px] flex items-center justify-center">
+      {/* 3D Beams Background for Newsletter Section */}
+      {mounted && (
+        <div className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
+          <Beams
+            beamWidth={2.5}
+            beamHeight={15}
+            beamNumber={14}
+            lightColor={isDark ? "#3f3f46" : "#ffffff"}
+            beamColor={isDark ? "#18181b" : "#ffffff"}
+            backgroundColor={isDark ? "#09090b" : "#ffffff"}
+            speed={1.5}
+            noiseIntensity={isDark ? 1.5 : 0.2}
+            scale={0.2}
+            rotation={0}
+            lightMode={!isDark}
+          />
+        </div>
+      )}
+
+      <div className="max-w-4xl mx-auto text-center px-6 relative z-10 w-full">
+        <Card className="rounded-2xl border border-zinc-200/80 bg-white/85 backdrop-blur-md dark:border-zinc-800/80 dark:bg-zinc-900/85 relative overflow-hidden shadow-xl">
           {/* Shine Effect */}
-          <div className="absolute inset-0 overflow-hidden rounded-2xl">
+          <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
             <div className="absolute top-0 left-0 w-30 h-full bg-gradient-to-r from-transparent via-foreground/5 to-transparent transform -skew-x-12 animate-slow-shine"></div>
           </div>
 
@@ -128,7 +157,7 @@ export function Newsletter() {
               <Mail className="w-8 h-8 text-primary" />
             </div>
             
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-white dark:via-zinc-200 dark:to-zinc-300">
               Join Our Newsletter
             </h2>
             <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
