@@ -16,7 +16,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://attenomy.com"),
   title: {
-    default: "Attenomy | Innovative Solutions for an Everchanging World",
+    default: "Attenomy | Innovative Solutions for a Digital World",
     template: "%s | Attenomy",
   },
   description: "Developing innovative solutions for an everchanging world. Transforming ideas into reality with cutting-edge technology.",

@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
-import { Partners } from "@/components/services/Partners";
-import { Reviews } from "@/components/services/Reviews";
 import Footer from "@/components/landing/footer";
 import { Newsletter } from "@/components/Newsletter";
 import { FAQ } from "@/components/FAQ";
@@ -11,7 +9,7 @@ import { ServicesCall } from "@/components/landing/ServicesCall";
 import { BlogCall } from "@/components/landing/BlogCall";
 
 export const metadata = {
-  title: "Attenomy | Developing Innovative Solutions for an Ever-Changing World",
+  title: "Attenomy | Innovative Solutions for a Digital World",
   description: "Developing innovative solutions for an ever-changing world. Transforming ideas into reality with cutting-edge technology.",
   alternates: {
     canonical: "/",
@@ -22,6 +20,25 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Navbar />
+
+      {/* Primary Server-Rendered Hero Header with Static H1 & Brand Image */}
+      <header className="pt-32 pb-8 px-6 max-w-5xl mx-auto text-center relative z-20">
+        <div className="flex justify-center mb-6">
+          <img
+            src="/logos/attenomy-squircle.svg"
+            alt="Attenomy Official Brand Logo"
+            width={64}
+            height={64}
+            className="h-16 w-16"
+          />
+        </div>
+        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold py-4 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
+          Developing Innovative Solutions for an Ever-Changing World
+        </h1>
+        <p className="text-lg md:text-xl lg:text-2xl mt-4 max-w-3xl mx-auto text-neutral-600 dark:text-neutral-300 font-normal">
+          Transforming ideas into reality with cutting-edge technology and enterprise platforms.
+        </p>
+      </header>
 
       <Hero />
 
@@ -36,7 +53,9 @@ export default function Home() {
         <p className="text-base md:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-8 max-w-3xl mx-auto">
           Our product ecosystem includes intelligent ATS candidate evaluation tools, instant credential verification infrastructure, and custom cloud software tailored for high-growth enterprises.
         </p>
-        <div className="flex flex-wrap justify-center gap-4 mt-6">
+        
+        {/* Navigation Link Hub */}
+        <nav aria-label="Quick Links" className="flex flex-wrap justify-center gap-4 mt-6">
           <Link href="/products" className="px-6 py-3 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-black font-medium hover:opacity-90 transition">
             Explore Products
           </Link>
@@ -49,7 +68,10 @@ export default function Home() {
           <Link href="/blog" className="px-6 py-3 rounded-full border border-neutral-300 dark:border-neutral-700 font-medium hover:bg-neutral-100 dark:hover:bg-neutral-900 transition">
             Latest Insights
           </Link>
-        </div>
+          <Link href="/contact" className="px-6 py-3 rounded-full border border-neutral-300 dark:border-neutral-700 font-medium hover:bg-neutral-100 dark:hover:bg-neutral-900 transition">
+            Contact Team
+          </Link>
+        </nav>
       </section>
 
       <ProductsCall />
