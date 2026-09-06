@@ -27,15 +27,8 @@ export default function Hero() {
         />
         <div className="relative flex w-full items-center justify-center px-4">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-semibold max-w-7xl mx-auto relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
-              Developing{" "}
-              <span className="hidden xl:inline lg:inline">
-                <FlipWords words={words} />
-              </span>
-              <span className="inline xl:hidden lg:hidden">
-                innovative
-              </span>{" "}
-              solutions for an ever-changing world!
+                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-semibold max-w-7xl mx-auto relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
+              Developing innovative solutions for an ever-changing world!
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl mt-8 max-w-3xl mx-auto text-neutral-700 dark:text-neutral-300 font-normal">
               Transforming ideas into reality with cutting-edge technology and creative thinking.

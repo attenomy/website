@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -9,6 +9,10 @@ import LoadingSpinner from "@/components/contexts/LoadingSpinner";
 
 const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || "ca-pub-9596215709723960";
 
+export const viewport: Viewport = {
+  themeColor: "#000000",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://attenomy.com"),
   title: {
@@ -16,8 +20,11 @@ export const metadata: Metadata = {
     template: "%s | Attenomy",
   },
   description: "Developing innovative solutions for an everchanging world. Transforming ideas into reality with cutting-edge technology.",
-  alternates: {
+    alternates: {
     canonical: "/",
+    languages: {
+      "en-US": "https://attenomy.com",
+    },
   },
   openGraph: {
     title: "Attenomy | Innovative Solutions for an Everchanging World",
