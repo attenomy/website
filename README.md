@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./public/readme_banner.png" alt="Attenomy Company Website Banner" width="100%" />
+  <img src="./assets/readme_banner.png" alt="Attenomy Company Website Banner" width="100%" />
 </div>
 
 <br />
