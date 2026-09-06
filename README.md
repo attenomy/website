@@ -1,5 +1,3 @@
-# Attenomy — Official Company Website
-
 <div align="center">
   <img src="./public/readme_banner.png" alt="Attenomy Company Website Banner" width="100%" />
 </div>
@@ -13,9 +11,6 @@
   <a href="https://attenomy.com">
     <img src="https://img.shields.io/badge/Website-Attenomy.com-09090b?style=for-the-badge&logo=vercel&logoColor=white" alt="Attenomy Website" />
   </a>
-  <a href="https://people.attenomy.com">
-    <img src="https://img.shields.io/badge/Portal-people.attenomy.com-18181b?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Attenomy People" />
-  </a>
   <img src="https://img.shields.io/badge/Version-v1.0.0-emerald?style=for-the-badge" alt="Version 1.0.0" />
 </div>
 
@@ -27,7 +22,7 @@
 
 Welcome to the official web repository for **Attenomy** maintained under **[attenomy/website](https://github.com/attenomy/website)**. 
 
-Attenomy builds next-generation AI agents, enterprise automation software, and digital infrastructure solutions. This repository powers our primary flagship website (`attenomy.com`) alongside our enterprise talent & HR ecosystem (`people.attenomy.com`).
+Attenomy builds next-generation AI agents, enterprise automation software, and digital infrastructure solutions. This repository powers our primary flagship website (`attenomy.com`).
 
 ---
 
@@ -35,7 +30,6 @@ Attenomy builds next-generation AI agents, enterprise automation software, and d
 
 - **AI-Native Product Showcase**: Interactive UI presenting Attenomy's core AI platforms, client solutions, and research initiatives.
 - **Unified Branding & Design System**: Crafted with custom glassmorphism, responsive light/dark themes, and high-performance micro-interactions.
-- **Integrated Ecosystem**: Seamlessly linked with [Attenomy People](https://people.attenomy.com) for career openings, verified credentials, and applicant tracking.
 - **Ultra-Fast Performance**: Built on Next.js App Router, React Server Components, and optimized vector graphics.
 
 ---
@@ -102,7 +96,6 @@ Attenomy builds next-generation AI agents, enterprise automation software, and d
 ## 🌐 Attenomy Digital Network
 
 - **Flagship Website**: [attenomy.com](https://attenomy.com)
-- **People & Talent Portal**: [people.attenomy.com](https://people.attenomy.com)
 - **GitHub Repository**: [github.com/attenomy/website](https://github.com/attenomy/website)
 
 ---
