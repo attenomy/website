@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/contexts/theme-provider";
 import { inter } from "@/lib/fonts";
 import LoadingSpinner from "@/components/contexts/LoadingSpinner";
 
-const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
+const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || "ca-pub-9596215709723960";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://attenomy.com"),
@@ -52,21 +52,21 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/logos/attenomy-squircle-light.png",
   },
-  other: adsenseClientId ? { "google-adsense-account": adsenseClientId } : {},
+  other: {
+    "google-adsense-account": adsenseClientId,
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        {adsenseClientId && (
-          <Script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
-            crossOrigin="anonymous"
-            strategy="afterInteractive"
-          />
-        )}
+        <meta name="google-adsense-account" content={adsenseClientId} />
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
+          crossOrigin="anonymous"
+        />
       </head>
       <body className={`${inter.className} bg-background antialiased`}>
         <ThemeProvider>
