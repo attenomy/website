@@ -26,7 +26,7 @@ export default function Products() {
       id: 1,
       title: "Coming Soon App",
       code: "Soon Industry",
-      image: "placeholder-icon.png",
+      image: "/icons/placeholder-icon.png",
       description: "Soon Solution"
     }
   ];

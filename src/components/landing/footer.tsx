@@ -21,14 +21,14 @@ export const FooterLogo = () => {
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 py-1 text-sm font-normal text-black">
       <img
-        src="/attenomy-logo-light.svg"
+        src="/logos/attenomy-logo-light.svg"
         alt="Attenomy logo"
         width={42}
         height={42}
         className="block dark:hidden h-10 w-10"
       />
       <img
-        src="/attenomy-logo-dark.svg"
+        src="/logos/attenomy-logo-dark.svg"
         alt="Attenomy logo"
         width={42}
         height={42}

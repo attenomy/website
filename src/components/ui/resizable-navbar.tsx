@@ -233,14 +233,14 @@ export const NavbarLogo = () => {
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
       <img
-        src="/attenomy-logo-light.svg"
+        src="/logos/attenomy-logo-light.svg"
         alt="Attenomy logo"
         width={38}
         height={38}
         className="block dark:hidden h-9 w-9"
       />
       <img
-        src="/attenomy-logo-dark.svg"
+        src="/logos/attenomy-logo-dark.svg"
         alt="Attenomy logo"
         width={38}
         height={38}

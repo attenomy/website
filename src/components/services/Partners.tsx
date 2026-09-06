@@ -55,146 +55,146 @@ export function Partners({
 const defaultPartners = [
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/partners/acme-logo.svg",
   },
   {
     name: " ",
-    logo: "/example-logo.svg",
+    logo: "/partners/example-logo.svg",
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/partners/acme-logo.svg",
   },
   {
     name: " ",
-    logo: "/example-logo.svg",
+    logo: "/partners/example-logo.svg",
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/partners/acme-logo.svg",
   },
   {
     name: " ",
-    logo: "/example-logo.svg",
+    logo: "/partners/example-logo.svg",
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/partners/acme-logo.svg",
   },
   {
     name: " ",
-    logo: "/example-logo.svg",
+    logo: "/partners/example-logo.svg",
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/partners/acme-logo.svg",
   },
   {
     name: " ",
-    logo: "/example-logo.svg",
+    logo: "/partners/example-logo.svg",
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/partners/acme-logo.svg",
   },
   {
     name: " ",
-    logo: "/example-logo.svg",
+    logo: "/partners/example-logo.svg",
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/partners/acme-logo.svg",
   },
   {
     name: " ",
-    logo: "/example-logo.svg",
+    logo: "/partners/example-logo.svg",
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/partners/acme-logo.svg",
   },
   {
     name: " ",
-    logo: "/example-logo.svg",
+    logo: "/partners/example-logo.svg",
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/partners/acme-logo.svg",
   },
   {
     name: " ",
-    logo: "/example-logo.svg",
+    logo: "/partners/example-logo.svg",
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/partners/acme-logo.svg",
   },
   {
     name: " ",
-    logo: "/example-logo.svg",
+    logo: "/partners/example-logo.svg",
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/partners/acme-logo.svg",
   },
   {
     name: " ",
-    logo: "/example-logo.svg",
+    logo: "/partners/example-logo.svg",
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/partners/acme-logo.svg",
   },
   {
     name: " ",
-    logo: "/example-logo.svg",
+    logo: "/partners/example-logo.svg",
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/partners/acme-logo.svg",
   },
   {
     name: " ",
-    logo: "/example-logo.svg",
+    logo: "/partners/example-logo.svg",
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/partners/acme-logo.svg",
   },
   {
     name: " ",
-    logo: "/example-logo.svg",
+    logo: "/partners/example-logo.svg",
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/partners/acme-logo.svg",
   },
   {
     name: " ",
-    logo: "/example-logo.svg",
+    logo: "/partners/example-logo.svg",
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/partners/acme-logo.svg",
   },
   {
     name: " ",
-    logo: "/example-logo.svg",
+    logo: "/partners/example-logo.svg",
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/partners/acme-logo.svg",
   },
   {
     name: " ",
-    logo: "/example-logo.svg",
+    logo: "/partners/example-logo.svg",
   },
   {
     name: " ",
-    logo: "/acme-logo.svg",
+    logo: "/partners/acme-logo.svg",
   },
   {
     name: " ",
-    logo: "/example-logo.svg",
+    logo: "/partners/example-logo.svg",
   },
 ];

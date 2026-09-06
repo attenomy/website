@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/contexts/theme-provider";
 import { inter } from "@/lib/fonts";
 import LoadingSpinner from "@/components/contexts/LoadingSpinner";
+
+const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://attenomy.com"),
@@ -42,18 +45,29 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/attenomy-squircle.svg", type: "image/svg+xml" },
-      { url: "/attenomy-squircle-light.png", media: "(prefers-color-scheme: light)" },
-      { url: "/attenomy-squircle-dark.png", media: "(prefers-color-scheme: dark)" },
+      { url: "/logos/attenomy-squircle.svg", type: "image/svg+xml" },
+      { url: "/logos/attenomy-squircle-light.png", media: "(prefers-color-scheme: light)" },
+      { url: "/logos/attenomy-squircle-dark.png", media: "(prefers-color-scheme: dark)" },
     ],
     shortcut: "/favicon.ico",
-    apple: "/attenomy-squircle-light.png",
+    apple: "/logos/attenomy-squircle-light.png",
   },
+  other: adsenseClientId ? { "google-adsense-account": adsenseClientId } : {},
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        {adsenseClientId && (
+          <Script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+          />
+        )}
+      </head>
       <body className={`${inter.className} bg-background antialiased`}>
         <ThemeProvider>
           <LoadingSpinner />
